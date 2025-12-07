@@ -39,6 +39,7 @@ Wordle/
 Clone the repository:
 
 git clone https://github.com/Amitreuveni-dev/Wordle.git
+
 cd Wordle
 
 npm install
