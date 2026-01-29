@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(cookieParser());
 
-mongoose.connect(`${MONGODB}fs-apr25`).then(() => {
+mongoose.connect(`${MONGODB}Wordle`).then(() => {
   console.log("Connected to MongoDB");
 }).catch(err => {
   console.error("Failed to connect to MongoDB", err);
