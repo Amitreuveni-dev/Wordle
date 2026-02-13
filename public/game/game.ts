@@ -70,7 +70,7 @@ async function reportGameResult(won: boolean): Promise<void> {
 
 async function updateUserData(amountOfGames: number, amountOfVictories: number): Promise<UserData | null> {
   try {
-    const response = await fetch("http://localhost:3000/data/update-data", {
+    const response = await fetch("/data/update-data", {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ async function updateUserData(amountOfGames: number, amountOfVictories: number):
 // ====== Fetch random word ======
 async function getRandomWord(): Promise<void> {
   try {
-    const response = await fetch("http://localhost:3000/words/get-random-word", {
+    const response = await fetch("/words/get-random-word", {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -408,7 +408,7 @@ function newGameHtml(mamessage: string): string {
 }
 async function checkIfWordExists(word: string): Promise<boolean> {
   try {
-    const response = await fetch("http://localhost:3000/words/check-if-exist", {
+    const response = await fetch("/words/check-if-exist", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

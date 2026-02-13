@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', (): void => {
         loadingDiv.style.display = 'block';
 
         try {
-            const response = await fetch("http://localhost:3000/user/register", {
+            const response = await fetch("/user/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
