@@ -378,11 +378,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // ====== Logout button ======
-  const logoutLink = document.querySelector('.link a[href="login.html"]') as HTMLAnchorElement | null;
-  if (logoutLink) {
-    logoutLink.addEventListener("click", (e) => {
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", async (e) => {
       e.preventDefault();
-      // redirect
+      await fetch("/user/logout", { method: "POST" });
       window.location.href = "../index.html";
     });
   }
